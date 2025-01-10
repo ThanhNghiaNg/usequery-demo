@@ -16,7 +16,7 @@ export const QueryKey = {
 export const query = {
     user: () => queryOptions({
         queryKey: QueryKey.user(),
-        staleTime: 1000 * 60 * 5, // 5 minutes
+        staleTime: 1000 * 60 * 5, // consider data is fresh in 5 minutes, not refetch again if the data is less than 5 minutes
         queryFn: () => getUserInfo(),
         select: (data) => {
             // transform data here
